@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MAP POC</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimal-ui">
+
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+
+		<link rel="stylesheet" type="text/css" href="ol/ol.css"/>
+		<link rel="stylesheet" type="text/css" href="ol/ol-layerswitcher.css"/>
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.min.js"></script>
+     	<script src="ol/ol.js"></script>
+     	<script src="ol/ol-layerswitcher.js"></script>
+		 	<script src="http://kendo.cdn.telerik.com/2019.1.220/js/kendo.all.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://kendo.cdn.telerik.com/2019.1.220/styles/kendo.common.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+     <script>
+		$(document).ready(function(){
+			treeViewBinding();
+
+		});
+	 </script>
+	 
+	 </head>
+     <body>
+<div id="map_frame">
+	<div id="HeaderMenu">
+		<div id="treeViewDiv"></div>
+		<div id=downloadField>
+			<button id="pngDownload" class="btn-primary" title="this Image will be used by .Net code to create formatted output PPT or other formats like we do in Sparta" onclick="generateDownloadLink('png')" value="Download Image" download>Download Image</button>
+			<button id="pdfDownload" class="btn-success" title="Out-Of-The-Box support from Geoserver for PDF output "  onclick="generateDownloadLink('pdf')" value="Download PDF">Download PDF</button>
+		</div>
+	</div>
+     	<div id="map">
+     		<!-- loading the javaScript file containing the properties of the map -->
+     		
+         <script type="text/javascript" src="index.js"></script>
+		</div>
+		<div id="map_control" style="width:150px;left:500px">
+
+		</div>
+	</div>
+     </body>
+</html>
+
+
+
+
